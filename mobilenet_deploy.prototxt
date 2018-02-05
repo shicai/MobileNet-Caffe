@@ -1,4 +1,4 @@
-name: "MOBILENET"
+﻿name: "MOBILENET"
 #  transform_param {
 #    scale: 0.017
 #    mirror: false
@@ -47,12 +47,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv1/scale"
   type: "Scale"
   bottom: "conv1"
   top: "conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -84,7 +96,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 32
-    #engine: CAFFE
+    engine: CAFFE
     stride: 1
     weight_filler {
       type: "msra"
@@ -108,12 +120,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv2_1/dw/scale"
   type: "Scale"
   bottom: "conv2_1/dw"
   top: "conv2_1/dw"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -167,12 +191,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv2_1/sep/scale"
   type: "Scale"
   bottom: "conv2_1/sep"
   top: "conv2_1/sep"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -204,7 +240,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 64
-    #engine: CAFFE
+    engine: CAFFE
     stride: 2
     weight_filler {
       type: "msra"
@@ -228,12 +264,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv2_2/dw/scale"
   type: "Scale"
   bottom: "conv2_2/dw"
   top: "conv2_2/dw"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -287,12 +335,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv2_2/sep/scale"
   type: "Scale"
   bottom: "conv2_2/sep"
   top: "conv2_2/sep"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -324,7 +384,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 128
-    #engine: CAFFE
+    engine: CAFFE
     stride: 1
     weight_filler {
       type: "msra"
@@ -348,12 +408,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv3_1/dw/scale"
   type: "Scale"
   bottom: "conv3_1/dw"
   top: "conv3_1/dw"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -407,12 +479,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv3_1/sep/scale"
   type: "Scale"
   bottom: "conv3_1/sep"
   top: "conv3_1/sep"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -444,7 +528,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 128
-    #engine: CAFFE
+    engine: CAFFE
     stride: 2
     weight_filler {
       type: "msra"
@@ -468,12 +552,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv3_2/dw/scale"
   type: "Scale"
   bottom: "conv3_2/dw"
   top: "conv3_2/dw"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -527,12 +623,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv3_2/sep/scale"
   type: "Scale"
   bottom: "conv3_2/sep"
   top: "conv3_2/sep"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -564,7 +672,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 256
-    #engine: CAFFE
+    engine: CAFFE
     stride: 1
     weight_filler {
       type: "msra"
@@ -588,12 +696,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv4_1/dw/scale"
   type: "Scale"
   bottom: "conv4_1/dw"
   top: "conv4_1/dw"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -647,12 +767,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv4_1/sep/scale"
   type: "Scale"
   bottom: "conv4_1/sep"
   top: "conv4_1/sep"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -684,7 +816,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 256
-    #engine: CAFFE
+    engine: CAFFE
     stride: 2
     weight_filler {
       type: "msra"
@@ -708,12 +840,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv4_2/dw/scale"
   type: "Scale"
   bottom: "conv4_2/dw"
   top: "conv4_2/dw"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -767,12 +911,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv4_2/sep/scale"
   type: "Scale"
   bottom: "conv4_2/sep"
   top: "conv4_2/sep"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -804,7 +960,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 512
-    #engine: CAFFE
+    engine: CAFFE
     stride: 1
     weight_filler {
       type: "msra"
@@ -828,12 +984,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv5_1/dw/scale"
   type: "Scale"
   bottom: "conv5_1/dw"
   top: "conv5_1/dw"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -887,12 +1055,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv5_1/sep/scale"
   type: "Scale"
   bottom: "conv5_1/sep"
   top: "conv5_1/sep"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -924,7 +1104,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 512
-    #engine: CAFFE
+    engine: CAFFE
     stride: 1
     weight_filler {
       type: "msra"
@@ -948,12 +1128,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv5_2/dw/scale"
   type: "Scale"
   bottom: "conv5_2/dw"
   top: "conv5_2/dw"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -1007,12 +1199,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv5_2/sep/scale"
   type: "Scale"
   bottom: "conv5_2/sep"
   top: "conv5_2/sep"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -1044,7 +1248,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 512
-    #engine: CAFFE
+    engine: CAFFE
     stride: 1
     weight_filler {
       type: "msra"
@@ -1068,12 +1272,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv5_3/dw/scale"
   type: "Scale"
   bottom: "conv5_3/dw"
   top: "conv5_3/dw"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -1127,12 +1343,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv5_3/sep/scale"
   type: "Scale"
   bottom: "conv5_3/sep"
   top: "conv5_3/sep"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -1164,7 +1392,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 512
-    #engine: CAFFE
+    engine: CAFFE
     stride: 1
     weight_filler {
       type: "msra"
@@ -1188,12 +1416,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv5_4/dw/scale"
   type: "Scale"
   bottom: "conv5_4/dw"
   top: "conv5_4/dw"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -1247,12 +1487,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv5_4/sep/scale"
   type: "Scale"
   bottom: "conv5_4/sep"
   top: "conv5_4/sep"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -1284,7 +1536,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 512
-    #engine: CAFFE
+    engine: CAFFE
     stride: 1
     weight_filler {
       type: "msra"
@@ -1308,12 +1560,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv5_5/dw/scale"
   type: "Scale"
   bottom: "conv5_5/dw"
   top: "conv5_5/dw"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -1367,12 +1631,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv5_5/sep/scale"
   type: "Scale"
   bottom: "conv5_5/sep"
   top: "conv5_5/sep"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -1404,7 +1680,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 512
-    #engine: CAFFE
+    engine: CAFFE
     stride: 2
     weight_filler {
       type: "msra"
@@ -1428,12 +1704,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv5_6/dw/scale"
   type: "Scale"
   bottom: "conv5_6/dw"
   top: "conv5_6/dw"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -1487,12 +1775,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv5_6/sep/scale"
   type: "Scale"
   bottom: "conv5_6/sep"
   top: "conv5_6/sep"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -1524,7 +1824,7 @@ layer {
     pad: 1
     kernel_size: 3
     group: 1024
-    #engine: CAFFE
+    engine: CAFFE
     stride: 1
     weight_filler {
       type: "msra"
@@ -1548,12 +1848,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv6/dw/scale"
   type: "Scale"
   bottom: "conv6/dw"
   top: "conv6/dw"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -1607,12 +1919,24 @@ layer {
     lr_mult: 0
     decay_mult: 0
   }
+  batch_norm_param {
+    use_global_stats: true
+    eps: 1e-5
+  }
 }
 layer {
   name: "conv6/sep/scale"
   type: "Scale"
   bottom: "conv6/sep"
   top: "conv6/sep"
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
+  param {
+    lr_mult: 1
+    decay_mult: 0
+  }
   scale_param {
     filler {
       value: 1
@@ -1663,4 +1987,10 @@ layer {
       value: 0
     }
   }
+}
+layer {
+  name: "prob"
+  type: "Softmax"
+  bottom: "fc7"
+  top: "prob"
 }
