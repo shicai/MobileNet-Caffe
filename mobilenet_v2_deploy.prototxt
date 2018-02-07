@@ -1,4 +1,4 @@
-﻿name: "MOBILENET_V2"
+name: "MOBILENET_V2"
 #  transform_param {
 #    scale: 0.017
 #    mirror: false

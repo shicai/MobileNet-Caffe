@@ -1,4 +1,4 @@
-﻿name: "MOBILENET"
+name: "MOBILENET"
 #  transform_param {
 #    scale: 0.017
 #    mirror: false
