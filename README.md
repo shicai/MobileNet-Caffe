@@ -111,6 +111,16 @@ layer {
   }
 }
 ```
+### Related Projects
+MobileNet in this repo has been used in the following projects, we recommend you to take a look:
+- The MobileNet neural network using Apple's new CoreML framework
+ [hollance/MobileNet-CoreML](https://github.com/hollance/MobileNet-CoreML)
+- Mobile-deep-learning [baidu/mobile-deep-learning](https://github.com/baidu/mobile-deep-learning)
+- Receptive Field Block Net for Accurate and Fast Object Detection [ruinmessi/RFBNet](https://github.com/ruinmessi/RFBNet)
+- Depthwise Convolutional Layer [yonghenglh6/DepthwiseConvolution](https://github.com/yonghenglh6/DepthwiseConvolution)
+- MobileNet-MXNet [KeyKy/mobilenet-mxnet](https://github.com/KeyKy/mobilenet-mxnet)
+- Caffe2-MobileNet [camel007/caffe2-mobilenet](https://github.com/camel007/caffe2-mobilenet)
+
 
 ### Updates (Feb. 5, 2018)
 
