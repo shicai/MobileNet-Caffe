@@ -1,0 +1,18 @@
+
+test_iter: 10 #not subject to iter_size
+test_interval: 10
+base_lr: 0.0001
+display: 10
+max_iter: 10000
+iter_size: 16 #global batch size = batch_size * iter_size
+lr_policy: "poly"
+power: 1.0 #linearly decrease LR
+momentum: 0.9
+weight_decay: 0.0002
+snapshot: 100
+snapshot_prefix: "train"
+solver_mode: GPU
+random_seed: 42
+net: "mobilenet_train.prototxt"
+test_initialization: true
+average_loss: 40
