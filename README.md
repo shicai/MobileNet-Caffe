@@ -15,8 +15,8 @@ The top-1/5 accuracy rates by using single center crop (crop size: 224x224, imag
 
 Network|Top-1|Top-5|sha256sum|Architecture
 :---:|:---:|:---:|:---:|:---:
-MobileNet v1| 70.81| 89.85| 8d6edcd3 (16.2 MB) | [netscope](http://ethereon.github.io/netscope/#/gist/2883d142ae486d4237e50f392f32994e)
-MobileNet v2| 71.90| 90.49| a3124ce7 (13.5 MB)| [netscope](http://ethereon.github.io/netscope/#/gist/d01b5b8783b4582a42fe07bd46243986)
+MobileNet v1| 70.81| 89.85| 8d6edcd3 (16.2 MB) | [netscope](http://ethereon.github.io/netscope/#/gist/2883d142ae486d4237e50f392f32994), [netron](http://lutzroeder.github.io/netron?gist=2883d142ae486d4237e50f392f32994e)
+MobileNet v2| 71.90| 90.49| a3124ce7 (13.5 MB)| [netscope](http://ethereon.github.io/netscope/#/gist/d01b5b8783b4582a42fe07bd46243986), [netron](http://lutzroeder.github.io/netron?gist=d01b5b8783b4582a42fe07bd46243986)
 
 
 ### Evaluate Models with a single image
