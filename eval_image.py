@@ -32,10 +32,10 @@ def eval():
     im = caffe.io.load_image(args.image)
     h, w, _ = im.shape
     if h < w:
-        off = (w - h) / 2
+        off = int((w - h) / 2)
         im = im[:, off:off + h]
     else:
-        off = (h - w) / 2
+        off = int((h - w) / 2)
         im = im[off:off + h, :]
     im = caffe.io.resize_image(im, [nh, nw])
 
